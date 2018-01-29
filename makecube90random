@@ -1,0 +1,2 @@
+rm cube90random
+g++ cube90random.cpp -std=c++11 -o cube90random
