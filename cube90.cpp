@@ -259,7 +259,7 @@ class CubeRandom {
             seed.push_back(char(s));
         }
 	Cube cube;
-        bytes = cube.encrypt(iv, aseed);
+        bytes = cube.encrypt(iv, seed);
         return bytes;
     }
 };
