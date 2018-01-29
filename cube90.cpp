@@ -243,17 +243,18 @@ class CubeKDF {
 class CubeRandom {
     public:
     string random (int length) {
-        char aseed[length];
+	int seedlength = 16;
+        char aseed[seedlength];
         string iv, bytes, seed;
         int x, s;
         for (x = 0; x < length; x++) {
             iv.push_back(char(32));
         }
         ifstream urandom("/dev/urandom", ios::in|ios::binary);
-        urandom.read(aseed, length);
+        urandom.read(aseed, seedlength);
         urandom.close();
         string tmp(aseed);
-        for (x = 0; x < length; x++) {
+        for (x = 0; x < seedlength; x++) {
             s = tmp[x] % (91 - 32 + 1) + 32;
             seed.push_back(char(s));
         }
