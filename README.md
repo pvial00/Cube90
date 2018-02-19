@@ -1,4 +1,6 @@
 # Cube90 C++ implementation  
+*** Disclaimer - This cipher is meant for entertainment and educational purposes
+ only and should not be used to actually provide good security
 Cube is an advanced general purpose substitution stream cipher.
 
 No attack of any kind has been proposed against Cube.  Cube passes NIST and DieHarder statistical tests.
